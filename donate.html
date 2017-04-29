@@ -5,63 +5,12 @@
 <meta charset="UTF-8">
 
 <title>捐赠记录</title>
- 
-<!-- Javascript goes in the document HEAD -->
-<script type="text/javascript">
-function altRows(id){
- if(document.getElementsByTagName){  
- 
- var table = document.getElementById(id);  
- var rows = table.getElementsByTagName("tr"); 
-  
- for(i = 0; i < rows.length; i++){          
- if(i % 2 == 0){
- rows[i].className = "evenrowcolor";
- }else{
- rows[i].className = "oddrowcolor";
- }      
- }
- }
-}
 
-window.onload=function(){
- altRows('alternatecolor');
-}
-</script>
-
-
-<!-- CSS goes in the document HEAD or added to your external stylesheet -->
-<style type="text/css">
-table.altrowstable {
- font-family: verdana,arial,sans-serif;
- font-size:11px;
- color:#333333;
- border-width: 1px;
- border-color: #a9c6c9;
- border-collapse: collapse;
-}
-table.altrowstable th {
- border-width: 1px;
- padding: 8px;
- border-style: solid;
- border-color: #a9c6c9;
-}
-table.altrowstable td {
- border-width: 1px;
- padding: 8px;
- border-style: solid;
- border-color: #a9c6c9;
-}
-.oddrowcolor{
- background-color:#d4e3e5;
-}
-.evenrowcolor{
- background-color:#c3dde0;
-}
-</style>
 </head>
 
 <body>
+ 
+<div id="donate" align=center>
  <p>以下是截止至2017年4月29日的捐赠记录，本页面每月更新一次，如果不想显示你的名字，请给我发邮件(附带截图)或者在捐赠时备注匿名 </p>
  <table border="1" cellpadding="0" cellspacing="0"  class="altrowstable" id="alternatecolor">
   
