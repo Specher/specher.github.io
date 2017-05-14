@@ -1,0 +1,75 @@
+#background-img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+#background-img {
+    background: url('/assets/images/background.jpg') repeat-x;
+}
+
+#intro {
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+#intro .title {
+    font-size: 26px;mdui-typo-title
+}
+
+#intro .description {
+    font-size: 14px;
+}
+
+#container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    background: #EEE;
+    padding-top: 32px;
+}
+
+#footer {
+    margin-top: 140px;
+}
+
+@media (min-width: 600px) {
+    #intro {
+        padding-top: 120px;
+    }
+    #intro .title {
+        font-size: 30px;
+    }
+    #intro .description {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #intro {
+        padding-top: 160px;
+    }
+    #intro .title {
+        font-size: 38px;
+    }
+    #intro .description {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #intro .title {
+        font-size: 45px;
+    }
+    #intro .description {
+        font-size: 20px;
+    }
+}
