@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+		<title>我的博客</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        	<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+</head>
+	<body>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<header id="header">
+								<h1 id="logo">我的博客</h1>
+								<nav id="nav">
+									<a href="index.html">主页</a>
+									<a href="logs.html" class="current-page-item">日志</a>
+									<a href="photo.html">相册</a>
+									<a href="about.html">关于</a>
+									
+								</nav>
+							</header>
+
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            
+            
+		<div id="main">
+				<div class="container">
+					<div class="row main-row">
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>文章列表</h2>
+								
+									<ul class="link-list">
+                              <li > <a href="logs.html">Ajax开发</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">0</a></div> </li>     
+												<li > <a href="http://user.qzone.qq.com/858198302/blog/1452657040">英雄联盟网吧特权逆向分析</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">5</a></div> </li>     
+                                                 
+												<li><a href="http://user.qzone.qq.com/858198302/blog/1438253399">妙用Loader类玩转Flash小游戏</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">9</a></div> </li>
+
+												<li><a href="http://user.qzone.qq.com/858198302/blog/1436522218">Flash小游戏无敌版的制作原理</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">2</a></div> </li>
+												<li><a href="http://user.qzone.qq.com/858198302/blog/1424525753">关于程序员会不会修电脑</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">6</a></div> </li>
+												<li><a href="http://user.qzone.qq.com/858198302/blog/1404468399">开发工程师之路</a>
+                                                <div align="left">2016-01-13 <img border="0" height="20" src="assets/css/images/icon-bubble.png"/><a href="#">20</a></div> </li>
+                                                <li>
+                                                  <p>上一页 1 <a href="javascript:;" onclick="QZBlog.Util.PageIndexManager.goDirectPage(2);return false;">2</a> <a href="javascript:;" onclick="QZBlog.Util.PageIndexManager.goDirectPage(3);return false;">3</a> <a href="javascript:;" onclick="QZBlog.Util.PageIndexManager.goDirectPage(4);return false;">4</a> <a onclick="QZBlog.Util.PageIndexManager.goPage(1);return false;" href="javascript:;">下一页</a> </p>
+                                                  <p>转到
+                                                    <input type="text" id="pageIndex_input1" value="1">
+                                                    页 
+                                                    <button onclick="QZBlog.Util.PageIndexManager.goDirectPage($('pageIndex_input1').value.trim());" type="button" >确 定</button>
+                                                  </p>
+                                                </li>
+											</ul>
+                                      
+								
+							</section>
+                            
+                             <section>
+								<h2>评论</h2>
+                                暂无评论
+                                <hr>
+								<div>
+									<div class="row">
+	<div class="6u 12u(mobile)">
+									      <textarea rows="5" cols="30"></textarea>
+								      
+									    <p>
+									      <button type="button" id="submitCommentBtn"  class="button">发表评论</button>
+
+								          </p>
+								     </div>   
+								 </div>
+                                   
+								</div>
+							</section>
+                            </div>
+                          
+                          
+                            <div class="8u 12u(mobile) important(mobile)">
+							<section class="right-content">
+								<h2>Ajax开发</h2>
+						<a href="#"><img src="images/pic6.jpg" alt="" class="top blog-post-image" /></a>
+								
+								<p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。
+AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。
+AJAX 是一种用于创建快速动态网页的技术。
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。</p>
+
+
+<p>AJAX不是一种新的编程语言，而是一种用于创建更好更快以及交互性更强的Web应用程序的技术。
+使用Javascript向服务器提出请求并处理响应而不阻塞用户！核心对象XMLHTTPRequest。通过这个对象，您的 JavaScript 可在不重载页面的情况与Web服务器交换数据。
+AJAX 在浏览器与 Web 服务器之间使用异步数据传输（HTTP 请求），这样就可使网页从服务器请求少量的信息，而不是整个页面。
+AJAX 可使因特网应用程序更小、更快，更友好。
+AJAX 是一种独立于 Web 服务器软件的浏览器技术。　AJAX 基于下列 Web 标准：
+JavaScriptXMLHTMLCSS在 AJAX 中使用的 Web 标准已被良好定义，并被所有的主流浏览器支持。AJAX 应用程序独立于浏览器和平台。
+Web 应用程序较桌面应用程序有诸多优势；它们能够涉及广大的用户，它们更易安装及维护，也更易开发。
+不过，因特网应用程序并不像传统的桌面应用程序那样完善且友好。
+通过 AJAX，因特网应用程序可以变得更完善，更友好。</p>
+
+<p>许多重要的技术和AJAX开发模式可以从现有的知识中获取。例如，在一个发送请求到服务端的应用中，必须包含请求顺序、优先级、超时响应、错误处理及回调，其中许多元素已经在Web服务中包含了。同时，随着技术的成熟还会有许多地方需要改进，特别是UI部分的易用性。
+AJAX开发与传统的C/S开发有很大的不同。这些不同引入了新的编程问题，最大的问题在于易用性。由于AJAX依赖浏览器的JavaScript和XML，浏览器的兼容性和支持的标准也变得和JavaScript的运行时性能一样重要了。这些问题中的大部分来源于浏览器、服务器和技术的组合，因此必须理解如何才能最好的使用这些技术。
+综合各种变化的技术和强耦合的客户服务端环境，AJAX提出了一种新的开发方式。AJAX开发人员必须理解传统的MVC架构，这限制了应用层次之间的边界。同时，开发人员还需要考虑C/S环境的外部和使用AJAX技术来重定型MVC边界。最重要的是，AJAX开发人员必须禁止以页面集合的方式来考虑Web应用而需要将其认为是单个页面。一旦UI设计与服务架构之间的范围被严格区分开来后，开发人员就需要更新和变化的技术集合了。</p>
+<hr>
+ <li><div align="left">2016-01-13</div> </li>     
+							</section>
+                            </div>
+                            </div>
+
+						</div>
+					</div>
+				</div>
+			</div>            
+            
+        
+        
+        
+			<div id="footer-wrapper">
+				<div class="container">
+			<!--		<div class="row">
+						<div class="8u 12u(mobile)">
+
+							<section>
+								<h2>一大波的超链接?</h2>
+								<div>
+									<div class="row">
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Suspendisse varius ipsum</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Vitae magna sed dolore</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Suspendisse varius ipsum</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+											</ul>
+										</div>
+										<div class="3u 12u(mobile)">
+											<ul class="link-list">
+												<li><a href="#">Quis accumsan lorem</a></li>
+												<li><a href="#">Sed neque nisi consequat</a></li>
+												<li><a href="#">Eget et amet consequat</a></li>
+												<li><a href="#">Dapibus sed mattis blandit</a></li>
+												<li><a href="#">Vitae magna sed dolore</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+						<div class="4u 12u(mobile)">
+
+							<section>
+								<h2>Something of interest</h2>
+								<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed.
+								Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet
+								mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
+								lorem ipsum dolor sit amet consequat blandit.</p>
+								<footer class="controls">
+									<a href="#" class="button">Oh, please continue ....</a>
+								</footer>
+							</section>
+
+						</div>
+					</div>-->
+       
+					<div class="row">
+						<div class="12u">
+
+							<div id="copyright">
+								&copy;<a href="#about">Specher</a>. All rights reserved. 
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+	</body>
+</html>
