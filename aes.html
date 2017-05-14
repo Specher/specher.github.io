@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="jQuery" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<title>演示：使用AES加密算法进行数据加密和解密</title>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+</head>
+<body>
+<div class="container">
+
+	<div class="row main">
+		<div class="col-md-12">
+			<h2 class="top_title"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><a href="http://www.helloweba.com/view-blog-407.html">使用AES加密算法进行数据加密和解密</a></h2>
+			
+			<div class="row" style="margin-top: 30px">
+                <div class="col-md-6 col-md-offset-3">
+                  <p>输入要加密的内容：</p>
+                    <textarea class="form-control" rows="3" id="input">www.Helloweba.com 欢迎您!</textarea>
+                </div>
+                <div class="col-md-6 col-md-offset-3 text-center" style="margin-top:20px">
+                  <button type="button" class="btn btn-info" id="doit">点击加密</button>
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                  <p>加密结果：</p>
+                    <textarea class="form-control" rows="3" id="output"></textarea>
+                </div>
+                <div class="col-md-6 col-md-offset-3 text-center" style="margin-top:20px">
+                  <button type="button" class="btn btn-warning" id="doit2">点击解密</button>
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                  <p>解密结果：</p>
+                    <textarea class="form-control" rows="3" id="output2"></textarea>
+                </div>
+			</div>
+
+		</div>
+	</div>
+	
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+<script>
+$('#doit').on('click', function(event) {
+  event.preventDefault();
+  var input = $("#input").val();
+  $.post('encode.php?action=en', {str: input}, function(data, textStatus, xhr) {
+    $('#output').val(data);
+  });
+});
+$('#doit2').on('click', function(event) {
+  event.preventDefault();
+  var input = $("#output").val();
+  $.post('encode.php?action=de', {str: input}, function(data, textStatus, xhr) {
+    $('#output2').val(data);
+  });
+});
+</script>
+</body>
+</html>
