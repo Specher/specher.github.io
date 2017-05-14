@@ -1,0 +1,111 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>
+			快手播放
+		</title>
+		<link rel="stylesheet" type="text/css" href="/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="/css/jquery-weui.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/iconfont.css" />
+		<link rel="stylesheet" href="/layui/css/layui.css" media="all">
+		<script src="/layui/layui.js"></script>
+		<script src="/js/jquery-2.1.4.js"></script>
+		<script src="/js/jquery-weui.js"></script>
+		<script src="/js/fastclick.js"></script>
+		<script src="/js/ksht.js"></script>
+		<!-- 如果使用了某些拓展插件还需要额外的JS -->
+		<script src="/js/swiper.js"></script>
+		<script src="/js/city-picker.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});</script>
+	</head>
+	<body ontouchstart>
+		<header class='ksht-header'>
+			<h1 class="ksht-title">
+				登陆
+			</h1>
+			<p class='ksht-sub-title'>
+			</p>
+		</header>
+		<div class="weui-cells weui-cells_form">
+			<form id="form_login">
+				<div class="weui-cell">
+					<div class="weui-cell__hd">
+						<label class="weui-label">
+							快手ID
+						</label>
+					</div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="ksid" type="number" placeholder="请输入快手ID">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="weui-btn-area">
+			<a class="weui-btn weui-btn_primary" href="javascript:" id="btn_login">
+				登陆
+			</a>
+		</div>
+		<script>
+			layui.use(['layer'],
+			function() {
+				var device = layui.device();
+				$(window).on("load",
+				function() {
+					if (device.weixin) {
+						$.modal({
+							title: '<i class="weui-icon-warn"></i>警告',
+							text: '微信内置浏览器无法正常使用本平台！',
+							buttons: [
+
+							{
+								text: "我先看看",
+								className: "default",
+								onClick: function() {}
+							},
+							]
+						});
+					}
+
+				});
+
+			});</script>
+		<script>
+			var _hmt = _hmt || []; (function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?54917e40694f0f10c2ce8d605f90b147";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();</script>
+		<script>
+			$("#btn_login").click(function() {
+				var ksid = $("#ksid").val();
+				$.showLoading("登录中");
+				//$.post(window.location.href, {"ksid": ksid}, function (data) {
+				//    $.hideLoading();
+				//    if (data["err"] == 0) {
+				//        $.toast("登陆成功！");
+				//        console.log(data);
+				//        setTimeout("javascript:location.href='" + data["url"] + "'", 2000);
+				//    } else if (data["err"] == -1) {
+				//        $.toast(data["msg"], "forbidden");
+				//    } else {
+				//        $.toast("异常错误，请联系管理员！", "forbidden");
+				//    }
+				//}, "json");
+				setCookie("ksid", ksid);
+				$.hideLoading();
+				$.toast("登陆成功！");
+				setTimeout("javascript:location.href='/bofang.html'", 2000);
+
+			});</script>
+	</body>
+
+</html>

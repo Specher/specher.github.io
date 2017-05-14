@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+
+    <title>快手播放</title>
+    <link rel="stylesheet" type="text/css" href="/css/weui.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/jquery-weui.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/iconfont.css"/>
+
+
+    <link rel="stylesheet" href="/layui/css/layui.css"  media="all">
+    <script src="/layui/layui.js"></script>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/jquery-weui.js"></script>
+    <script src="/js/fastclick.js"></script>
+    <script src="/js/ksht.js"></script>
+
+    <!-- 如果使用了某些拓展插件还需要额外的JS -->
+    <script src="/js/swiper.js"></script>
+    <script src="/js/city-picker.js"></script>
+
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        });
+    </script>
+    
+
+
+    <style>
+        .weui-grid__icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body ontouchstart>
+
+
+
+
+    <header class="bar bar-nav">
+        <h1 class="title">功能介绍说明 </h1>
+        <a href="javascript:;" onClick="javascript:history.back(-1);" class="icon pull-left">
+            <i class="iconfont">&#xe63c;</i>
+        </a>
+
+        <a href="/" class="icon pull-right"><i class="iconfont">&#xe64f;</i></a>
+    </header>
+    
+
+    <div class="content">
+        
+
+
+
+
+
+    <div class="weui-cells weui-cells_form">
+        <span style="font-weight: bold;">1·关于登陆后不能换ID问题</span>
+        <div>答：由于这个功能后面要放到“我”用户中心里面，但是平台“我”还在加紧完善，所以造成的不便深表歉意，我们加快脚步完善平台！</div>
+        <div><span style="font-weight: bold;">2·刷浏览量功能</span></div>
+        <div>答：刷播放量有时候会现在延迟到的情况，重进或者刷新就可以了。</div>
+        <div><span style="font-weight: bold;">3·互推大厅功能</span></div>
+        <div>
+            答：大家可以踊跃上传作品，别人看到您的作品会帮您点赞和评论，您会扣除相应的积分，别人会得到相应的积分，反之你也可以帮忙别人点赞和评论，你也可以得到相应的积分，所以为了大家的作品一直在互推大厅里面，大家可以积极互。当有一定的评论和赞之后你的作品就有机会上热门了，上热门之后您的号基本上就可以直播了！
+        </div>
+        <div><span style="font-weight: bold;">4·无水印下载功能</span></div>
+        <div>答：您想下载别人的快手视频，但是别人的快手视频有水印广告的，你就可以在这里消除别人的水印。</div>
+        <div><span style="font-weight: bold;">5·互粉推广功能</span></div>
+        <div>答：在这里你可以生成你自己独特的互粉链接，别人一键关注，省去了扫描二维码和输入ID的麻烦，也是非常的方便哦！
+            大家还有什么问题要解答和或者有什么建议的可以加群交流哦！谢谢大家的支持！你们是我们前进的动力！把最好的服务呈现的你们是我们的义务！
+        </div>
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+    <div class="weui-tabbar" style='position: fixed'>
+        <a href="/" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <i class="iconfont">&#xe64f;</i>
+            </div>
+            <p class="weui-tabbar__label">首页</p>
+        </a>
+        <a href="/photo/bofan" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <i class="iconfont">&#xe679;</i>
+            </div>
+            <p class="weui-tabbar__label">刷浏览量</p>
+        </a>
+        <a href="/photo/list" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <i class="iconfont">&#xe626;</i>
+            </div>
+            <p class="weui-tabbar__label">互推大厅</p>
+        </a>
+        <a href="/user/profile" class="weui-tabbar__item weui-bar__item">
+            <div class="weui-tabbar__icon">
+                <i class="iconfont">&#xe659;</i>
+            </div>
+            <p class="weui-tabbar__label">我</p>
+        </a>
+    </div>
+    
+
+
+
+
+<script>
+    layui.use(['layer'], function () {
+        var device = layui.device();
+        $(window).on("load", function () {
+            if (device.weixin) {
+                $.modal({
+                    title: '<i class="weui-icon-warn"></i>警告',
+                    text: '微信内置浏览器无法正常使用本平台！',
+                    buttons: [
+
+                        {
+                            text: "我先看看", className: "default", onClick: function () {
+                        }
+                        },
+                    ]
+                });
+            }
+
+
+        });
+
+
+    });
+
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?54917e40694f0f10c2ce8d605f90b147";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</body>
+</html>
