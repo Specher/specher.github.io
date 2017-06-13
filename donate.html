@@ -42,7 +42,7 @@
 </head>
 
 <body>
- 
+ <a name="top"></a>
 <div id="donate" align=center>
 <a href="../">返回主页</a>  <a href="javascript:window.opener=null;window.open('','_self');window.close();">关闭页面</a>
  <p>你的捐赠是对我极大的鼓励，是对国产软件开发行业的贡献，也是我继续开发和更新软件的动力之一。</p>
@@ -1829,12 +1829,23 @@
  <p>
  非常感谢有你们的支持，这些钱我将用来让软件更完善以及开发更好用的软件。😚</br>
  捐赠方式：</br>
- ①支付宝转账 <input type="text" value="858198302@qq.com">记得打备注</br>
+ ①支付宝转账 <input type="text" id="out" value="858198302@qq.com"><input type="button" class="copy" data-clipboard-target="#out" onClick="copyUrl2()" value="点击复制" />记得打备注</br>
  ②手机端使用外部浏览器打开<a href="https://qr.alipay.com/aphc6ro75cs7y4slaf">捐赠链接</a></br>
  ③用支付宝扫描二维码：</p>
   <p><img src="qrcode.jpg" width="300" height="300"></p>
+ <a href="#top">回到顶部</a>
 </div>
+<script src="/morse/dist/clipboard.min.js"></script> 
+<script type="text/javascript">
+ function copyUrl2()
+{
+var clipboard = new Clipboard('.copy');
+clipboard.on('success', function(e) {
+alert("复制成功！");
 
+});
+}
+ </script>
 </body>
 
 </html>
