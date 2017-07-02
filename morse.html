@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.5, user-scalable=yes">  
+  <title>摩尔斯电码</title>
+  <style>
+
+  
+  input{
+  text-align:center;
+  }
+  .btn {
+	text-transform: uppercase;
+	background: rgb(0, 100, 0); color: white;
+	padding: 10px; border-radius: 5px;
+	cursor: pointer;margin:10px auto;width:100px;text-align:center;
+	
+}
+
+.btn {
+	text-transform: uppercase;
+	background: rgb(0, 100, 0); color: white;
+	padding: 10px; border-radius: 5px;
+	cursor: pointer;margin:10px auto;width:200px;text-align:center;
+}
+.btn:hover {background: rgb(0, 75, 0);}
+input,textarea{padding:10px; border:1px solid #d3d3d3;width:300px}
+textarea{height:80px}
+
+  </style>
+</head>
+<body>
+
+
+  <form align=center class=demo>
+	输入区域：<br />
+    <textarea rows='10' id='input'>I love you, 我爱你。</textarea>
+    <br />
+    分隔符: <br /><input type='text' id='space' value='/' placeholder='space' />
+	  <br />
+    短: <br /><input type='text' id='short' value='.' placeholder='short' />
+	  <br />
+    长: <br /><input type='text' id='long' value='-' placeholder='long' />
+    <br />
+    <br />
+    <input type='button' class="btn" onclick='encode()' value='摩尔斯电码加密' />
+    <input type='button' class="btn" onclick='decode()' value='摩尔斯电码解密' />
+  </form>
+
+  <hr />
+  <div id="result" align=center>
+
+</div>
+<script src="dist/clipboard.min.js"></script> 
+  <script type="text/javascript" src="dist/xmorse.min.js"></script>
+  <script type="text/javascript">
+
+  
+    function $_(id) {
+      return document.getElementById(id);
+    }
+    function getoption() {
+      return {
+        space: $_('space').value,
+        short: $_('short').value,
+        long: $_('long').value,
+      };
+    }
+	  function copyUrl2()
+{
+var clipboard = new Clipboard('.copy');
+clipboard.on('success', function(e) {
+alert("复制成功！");
+
+});
+}
+
+    function encode() {
+      $_('result').innerHTML ="<textarea rows=\"5\" id=\"out\" >" + xmorse.encode($_('input').value, getoption())+  "</textarea>" +"<br /><input type=\"button\" class=\"copy\" data-clipboard-target=\"#out\" onClick=\"copyUrl2()\" value=\"点击复制代码\" />";
+    }
+    function decode() {
+      $_('result').innerHTML = "<textarea rows=\"5\" id=\"out\" >" + xmorse.decode($_('input').value, getoption())+  "</textarea>" +"<br /><input type=\"button\" class=\"copy\" data-clipboard-target=\"#out\" onClick=\"copyUrl2()\" value=\"点击复制代码\" />" ;
+    }
+  </script>
+</body>
+</html>
