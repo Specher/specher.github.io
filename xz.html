@@ -2,9 +2,9 @@
  <!DOCTYPE html>
 <html>
 <head>
-<script src="assets/js/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <meta charset="utf-8">
-
+<title>下载插件</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
 <style type="text/css">
 body,table{  
@@ -25,8 +25,9 @@ table.t1{
     color:#666;  
 }  
 table.t1 th {  
-    background-image: url(images/th_bg2.png);  
-    background-repeat::repeat-x;  
+   background-image: url(images/th_bg.png);  
+	background-repeat: no-repeat;
+	background-size:100% 100%;
     height:30px;  
 }  
 table.t1 td,table.t1 th{  
@@ -43,7 +44,8 @@ table.t1 tr.a1{
  
  //ajax获得传来的json字符串
             $.get("data.json", function (json) {
-           
+                //假设data="{T1:[{User_ID:'123',User_Name:'李四'},{User_ID:'345',User_Name:'张三'}]}";
+
             var jsondatas = eval(json);
 			//console.log(jsondatas);
             $.each(jsondatas, function (i, datas) {//遍历
