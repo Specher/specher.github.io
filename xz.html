@@ -25,7 +25,7 @@ table.t1{
     color:#666;  
 }  
 table.t1 th {  
-    background-image: url(images/th_bg2.gif);  
+    background-image: url(images/th_bg2.png);  
     background-repeat::repeat-x;  
     height:30px;  
 }  
@@ -43,8 +43,7 @@ table.t1 tr.a1{
  
  //ajax获得传来的json字符串
             $.get("data.json", function (json) {
-                //假设data="{T1:[{User_ID:'123',User_Name:'李四'},{User_ID:'345',User_Name:'张三'}]}";
-
+           
             var jsondatas = eval(json);
 			//console.log(jsondatas);
             $.each(jsondatas, function (i, datas) {//遍历
