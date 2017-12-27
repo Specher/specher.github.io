@@ -1,0 +1,98 @@
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+<style type="text/css">
+body,table{  
+    font-size:14px;  
+}  
+table{  
+    table-layout:fixed;  
+    empty-cells:show;   
+    border-collapse: collapse;  
+    margin:0 auto;  
+}  
+td{  
+    height:28px;  
+}  
+
+table.t1{  
+    border:1px solid #cad9ea;  
+    color:#666;  
+}  
+table.t1 th {  
+    background-image: url(images/th_bg2.gif);  
+    background-repeat::repeat-x;  
+    height:30px;  
+}  
+table.t1 td,table.t1 th{  
+    border:1px solid #cad9ea;  
+    padding:0 1em 0;  
+}  
+table.t1 tr.a1{  
+    background-color:#f5fafe;  
+}  
+  
+</style>
+<script>
+
+ 
+ //ajax获得传来的json字符串
+            $.get("data.json", function (json) {
+                //假设data="{T1:[{User_ID:'123',User_Name:'李四'},{User_ID:'345',User_Name:'张三'}]}";
+
+            var jsondatas = eval(json);
+			//console.log(jsondatas);
+            $.each(jsondatas, function (i, datas) {//遍历
+
+
+           
+				$.each(datas,function(i,data){
+				//console.log(data);
+				 var linkss ="";
+				 $.each(data.links,function(i,links){
+					
+				 linkss =  linkss + "  <a href='" + links.url +"'>"+links.name+"</a>";
+				 }
+				 );
+				 
+				 var tr = $("<tr class=\"a1\"><td>" + data.name+ "</td><td>" + data.version+ "</td><td>" + data.size+ "</td><td>"+data.describe + "</td><td>" +  linkss + "</td></tr>");
+				 
+				
+				 
+                
+				//动态生成列表
+                $("table").append(tr);
+
+				});
+			
+			
+			
+               
+
+              
+                });
+
+            });
+        
+
+</script>
+
+</head>
+<body>
+
+<table border="1" class="t1">
+
+<thead>  
+<th>插件名称</th><th>版本号</th><th>大小</th><th>描述</th><th>下载地址</th>
+  </thead>  
+
+</table>
+
+</body>
+</html>
+ 

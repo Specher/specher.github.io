@@ -1,0 +1,28 @@
+{
+"data":[
+{
+    "name": "插件功能演示",
+   "describe": "用来演示Api功能",
+    "version":"1.0",
+   "size":"11KB",
+    "links":[{"name":"百度","url": "http://www.baidu.com"},{"name":"腾讯","url":"http://www.qq.com"}]
+ } ,
+{
+    "name": "QQ定时消息",
+   "describe": "定时发送消息给好友或群",
+   "version":"1.0",
+   "size":"20KB",
+    "links":[{"name":"百度","url": "http://www.baidu.com"},{"name":"腾讯","url":"http://www.qq.com"}]
+ } 
+,
+{
+    "name": "Sp群管",
+   "describe": "关键词检测禁言",
+    "version":"1.0",
+   "size":"100KB",
+    "links":[{"name":"百度","url": "http://www.baidu.com"},{"name":"腾讯","url":"http://www.qq.com"}]
+ } 
+
+
+]
+}
