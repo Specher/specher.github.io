@@ -2,9 +2,9 @@
 "data":[
 {
     "name": "插件功能演示",
-   "describe": "用来演示Api功能",
+   "describe": "用来演示最新的Api功能，以及测试插件是否正常运行",
     "version":"1.0",
-   "size":"11KB",
+   "size":"12KB",
     "links":[{"name":"百度","url": "http://www.baidu.com"},{"name":"腾讯","url":"http://www.qq.com"}]
  } ,
 {
@@ -12,7 +12,7 @@
    "describe": "定时发送消息给好友或群",
    "version":"1.0",
    "size":"20KB",
-    "links":[{"name":"百度","url": "http://www.baidu.com"},{"name":"腾讯","url":"http://www.qq.com"}]
+    "links":[{"name":"正在开发中...","url": ""}]
  } 
 ,
 {
